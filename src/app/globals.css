@@ -216,3 +216,13 @@
   margin: 0 auto;
   padding: 1.5rem;
 }
+
+/* Arabic text font (body content only) */
+[dir="rtl"] .bio-container {
+  font-family: var(--font-cairo), 'Cairo', sans-serif;
+}
+
+/* English text font (body content only) */
+[dir="ltr"] .bio-container {
+  font-family: var(--font-outfit), 'Outfit', sans-serif;
+}

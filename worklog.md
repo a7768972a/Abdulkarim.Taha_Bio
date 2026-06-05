@@ -82,3 +82,43 @@ Stage Summary:
 - All user requests completed
 - User still needs to provide: Discord account username
 - Page running at http://localhost:3000
+
+---
+Task ID: 4
+Agent: Main Agent
+Task: Update bio page per user feedback - Round 9
+
+Work Log:
+- Changed Arabic body text font to **Cairo** (modern, clean Arabic Google Font)
+  - Applied via CSS: `[dir="rtl"] .bio-container` → Cairo font
+  - UI elements (toggle button, loading screen) keep original Geist font
+- Changed English body text font to **Outfit** (contemporary sans-serif Google Font)
+  - Applied via CSS: `[dir="ltr"] .bio-container` → Outfit font
+- Imported Cairo and Outfit fonts in layout.tsx via next/font/google
+- Replaced "خدماتي" (My Services) section with "مهاراتي" (My Skills) section
+  - 8 skills listed with expandable details (click to show/hide):
+    1. JavaScript & TypeScript
+    2. React & Next.js
+    3. HTML5 & CSS3
+    4. Python
+    5. AI & Machine Learning
+    6. UI/UX Design
+    7. Git & Version Control
+    8. Backend Development
+  - Each skill has: colored icon, title, and description (both AR and EN)
+  - User will edit descriptions later — placeholders provided
+- Updated translation keys: service → skill naming
+- QA tested with agent-browser:
+  - Arabic text uses Cairo font (confirmed by VLM)
+  - English text uses Outfit font (confirmed by VLM)
+  - Language toggle works correctly
+  - Skills section expands to show all 8 skills with descriptions
+  - All sections render properly, no errors
+- Lint passes clean
+
+Stage Summary:
+- Arabic and English body text fonts changed (Cairo / Outfit)
+- UI components keep original font
+- Skills section has 8 skills with descriptions (user will edit text)
+- Page running at http://localhost:3000
+- Discord account username still placeholder
