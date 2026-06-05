@@ -122,3 +122,32 @@ Stage Summary:
 - Skills section has 8 skills with descriptions (user will edit text)
 - Page running at http://localhost:3000
 - Discord account username still placeholder
+
+---
+Task ID: 5
+Agent: Main Agent
+Task: Merge My Links into Connect With Me + Update Skills to 4 user-specified skills
+
+Work Log:
+- Moved Instagram, YouTube, Discord Server from "My Links" section into "Connect With Me" section
+  - Connect With Me now has 7 items: Discord, GitHub, Steam, Instagram, YouTube, Discord Server, Phone
+- Removed "My Links" section entirely (JSX + data + translations)
+- Removed unused LinkIcon component reference and linksTitle translation key
+- Updated skills from 8 generic tech skills to 4 user-specified skills:
+  1. 🌐 تصميم وتطوير وبناء المواقع الالكترونية والمتاجر الالكترونية (Web Design, Development & E-commerce)
+  2. 🏢 بناء الانظمة الذكية المعقدة للشركات والمؤسسات (Complex Smart Systems for Companies)
+  3. 🤖 الاتمتة الذكية باستخدام الذكاء الصناعي — ATMETLY AI (Smart AI Automation)
+  4. 📢 تصميم وترويج الاعلانات الالكترونية بالذكاء الصناعي (AI-Powered Ad Design & Promotion)
+- Each skill has AR + EN title and description
+- QA tested with agent-browser:
+  - My Links section removed ✅
+  - Connect With Me has 7 links ✅
+  - Skills section expands to show 4 skills ✅
+  - Language toggle works ✅
+- Lint passes clean
+
+Stage Summary:
+- My Links section fully removed, merged into Connect With Me
+- Skills section now has exactly 4 user-specified skills
+- Page running at http://localhost:3000
+- Discord account username still placeholder

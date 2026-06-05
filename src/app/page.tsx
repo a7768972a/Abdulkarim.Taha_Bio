@@ -24,28 +24,16 @@ const t: Translations = {
   },
   skillsTitle: { ar: 'مهاراتي', en: 'My Skills' },
   skillsSubtitle: { ar: 'برمجة وتصميم المواقع الالكترونية', en: 'Website Programming & Design' },
-  skill1Title: { ar: 'JavaScript & TypeScript', en: 'JavaScript & TypeScript' },
-  skill1Desc: { ar: 'لغة برمجة قوية لبناء مواقع تفاعلية وتطبيقات الويب الحديثة مع نظام الأنواع القوي.', en: 'Powerful programming language for building interactive websites and modern web apps with strong typing.' },
-  skill2Title: { ar: 'React & Next.js', en: 'React & Next.js' },
-  skill2Desc: { ar: 'إطار عمل شائع لبناء واجهات مستخدم ديناميكية وتطبيقات الويب بسرعة وأداء عالي.', en: 'Popular framework for building dynamic user interfaces and web apps with speed and high performance.' },
-  skill3Title: { ar: 'HTML5 & CSS3', en: 'HTML5 & CSS3' },
-  skill3Desc: { ar: 'أساسيات بناء وتصميم صفحات الويب مع دعم كامل للتصميم المتجاوب والتنسيق الاحترافي.', en: 'Fundamentals of building and designing web pages with full responsive design and professional styling.' },
-  skill4Title: { ar: 'Python', en: 'Python' },
-  skill4Desc: { ar: 'لغة برمجة متعددة الاستخدامات تُستخدم في تطوير التطبيقات وتحليل البيانات والذكاء الاصطناعي.', en: 'Versatile programming language used for app development, data analysis, and AI.' },
-  skill5Title: { ar: 'الذكاء الاصطناعي والتعلم الآلي', en: 'AI & Machine Learning' },
-  skill5Desc: { ar: 'استخدام تقنيات الذكاء الاصطناعي لأتمتة العمليات وبناء حلول ذكاء اصطناعي متقدمة.', en: 'Using AI technologies to automate processes and build advanced AI solutions.' },
-  skill6Title: { ar: 'تصميم واجهات المستخدم (UI/UX)', en: 'UI/UX Design' },
-  skill6Desc: { ar: 'تصميم واجهات مستخدم عصرية وسهلة الاستخدام مع تجربة مستخدم ممتازة وجذابة.', en: 'Designing modern, user-friendly interfaces with an excellent and attractive user experience.' },
-  skill7Title: { ar: 'Git & التحكم بالإصدارات', en: 'Git & Version Control' },
-  skill7Desc: { ar: 'إدارة الكود المصدري وتتبع التعديلات والتعاون مع فرق التطوير بكفاءة.', en: 'Managing source code, tracking modifications, and collaborating with development teams efficiently.' },
-  skill8Title: { ar: 'تطوير الخوادم (Backend)', en: 'Backend Development' },
-  skill8Desc: { ar: 'بناء خوادم وقواعد بيانات وواجهات برمجة تطبيقات RESTful لتشغيل تطبيقات الويب.', en: 'Building servers, databases, and RESTful APIs to power web applications.' },
+  skill1Title: { ar: 'تصميم وتطوير وبناء المواقع الالكترونية والمتاجر الالكترونية', en: 'Web Design, Development & E-commerce' },
+  skill1Desc: { ar: 'تصميم وتطوير وبناء المواقع الالكترونية والمتاجر الالكترونية بجودة عالية وتصميم احترافي.', en: 'Designing, developing and building websites and e-commerce stores with high quality and professional design.' },
+  skill2Title: { ar: 'بناء الانظمة الذكية المعقدة للشركات والمؤسسات', en: 'Complex Smart Systems for Companies' },
+  skill2Desc: { ar: 'بناء انظمة ذكية ومعقدة مخصصة للشركات والمؤسسات لتعزيز كفاءة العمل والانتاجية.', en: 'Building complex smart systems tailored for companies and institutions to boost efficiency and productivity.' },
+  skill3Title: { ar: 'الاتمتة الذكية باستخدام الذكاء الصناعي', en: 'Smart AI Automation — ATMETLY AI' },
+  skill3Desc: { ar: 'الاتمتة الذكية باستخدام الذكاء الصناعي — هذا هو العمل الاساسي لمؤسسة ATMETLY AI.', en: 'Smart automation using AI — this is the core work of ATMETLY AI.' },
+  skill4Title: { ar: 'تصميم وترويج الاعلانات الالكترونية بالذكاء الصناعي', en: 'AI-Powered Ad Design & Promotion' },
+  skill4Desc: { ar: 'تصميم وترويج الاعلانات الالكترونية بانواعها باستخدام احدث تقنيات الذكاء الصناعي.', en: 'Designing and promoting electronic ads of all types using the latest AI technologies.' },
   connectTitle: { ar: 'تواصل معي', en: 'Connect With Me' },
-  phone: { ar: 'هاتف', en: 'Phone' },
-  linksTitle: { ar: '🔗 روابطي', en: '🔗 My Links' },
   footer: { ar: '© 2025 عبدالكريم طه. جميع الحقوق محفوظة.', en: '© 2025 Abdulkarim Taha. All rights reserved.' },
-  viewDetails: { ar: 'عرض التفاصيل', en: 'View Details' },
-  hideDetails: { ar: 'إخفاء التفاصيل', en: 'Hide Details' },
 };
 
 const LangContext = createContext<{ lang: Lang; toggle: () => void }>({ lang: 'ar', toggle: () => {} });
@@ -97,19 +85,6 @@ const socialLinks: SocialLink[] = [
     usernameAr: 'abdul85524',
   },
   {
-    name: 'Phone',
-    nameAr: 'هاتف',
-    icon: 'phone',
-    url: 'tel:+963948579158',
-    color: '#00d4aa',
-    username: '+963 948 579 158',
-    usernameAr: '+963 948 579 158',
-    isPhone: true,
-  },
-];
-
-const myLinks: { name: string; nameAr: string; icon: string; url: string; color: string; username: string; usernameAr: string }[] = [
-  {
     name: 'Instagram',
     nameAr: 'انستغرام',
     icon: 'instagram',
@@ -136,7 +111,19 @@ const myLinks: { name: string; nameAr: string; icon: string; url: string; color:
     username: 'ATMETLY Community',
     usernameAr: 'مجتمع ATMETLY',
   },
+  {
+    name: 'Phone',
+    nameAr: 'هاتف',
+    icon: 'phone',
+    url: 'tel:+963948579158',
+    color: '#00d4aa',
+    username: '+963 948 579 158',
+    usernameAr: '+963 948 579 158',
+    isPhone: true,
+  },
 ];
+
+
 
 // ─── SVG Icons ──────────────────────────────────────────────────
 function DiscordIcon({ className = 'w-6 h-6' }: { className?: string }) {
@@ -366,52 +353,28 @@ function MouseGlow() {
 // ─── Skills Data ────────────────────────────────────────────
 const skills = [
   {
-    icon: '💻',
+    icon: '🌐',
     titleKey: 'skill1Title',
     descKey: 'skill1Desc',
-    color: '#F7DF1E',
+    color: '#00d4aa',
   },
   {
-    icon: '⚛️',
+    icon: '🏢',
     titleKey: 'skill2Title',
     descKey: 'skill2Desc',
-    color: '#61DAFB',
-  },
-  {
-    icon: '🎨',
-    titleKey: 'skill3Title',
-    descKey: 'skill3Desc',
-    color: '#E44D26',
-  },
-  {
-    icon: '🐍',
-    titleKey: 'skill4Title',
-    descKey: 'skill4Desc',
-    color: '#3776AB',
-  },
-  {
-    icon: '🤖',
-    titleKey: 'skill5Title',
-    descKey: 'skill5Desc',
     color: '#5865F2',
   },
   {
-    icon: '✨',
-    titleKey: 'skill6Title',
-    descKey: 'skill6Desc',
-    color: '#FF6B9D',
+    icon: '🤖',
+    titleKey: 'skill3Title',
+    descKey: 'skill3Desc',
+    color: '#FFB800',
   },
   {
-    icon: '📦',
-    titleKey: 'skill7Title',
-    descKey: 'skill7Desc',
-    color: '#F05032',
-  },
-  {
-    icon: '🔧',
-    titleKey: 'skill8Title',
-    descKey: 'skill8Desc',
-    color: '#00d4aa',
+    icon: '📢',
+    titleKey: 'skill4Title',
+    descKey: 'skill4Desc',
+    color: '#E1306C',
   },
 ];
 
@@ -647,50 +610,6 @@ export default function Home() {
                     ) : (
                       <ExternalLinkIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
                     )}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.section>
-
-            {/* My Links Section — Instagram, YouTube, Discord Server */}
-            <motion.section
-              className="glass rounded-2xl p-6 mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.25 }}
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <LinkIcon className="w-4 h-4 text-primary" />
-                </div>
-                <h2 className="text-lg font-semibold text-gradient"><T k="linksTitle" /></h2>
-              </div>
-
-              <div className="space-y-3">
-                {myLinks.map((link, i) => (
-                  <motion.a
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-card flex items-center gap-4 p-4 rounded-xl glass cursor-pointer group"
-                    initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.3 + i * 0.08 }}
-                  >
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors"
-                      style={{ backgroundColor: `${link.color}20` }}
-                    >
-                      <div style={{ color: link.color }}>
-                        {getSocialIcon(link.icon)}
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
-                      <p className="text-xs text-muted-foreground truncate">{lang === 'ar' ? link.usernameAr : link.username}</p>
-                    </div>
-                    <ExternalLinkIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
                   </motion.a>
                 ))}
               </div>
