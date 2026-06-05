@@ -151,3 +151,42 @@ Stage Summary:
 - Skills section now has exactly 4 user-specified skills
 - Page running at http://localhost:3000
 - Discord account username still placeholder
+
+---
+Task ID: 6
+Agent: Main Agent
+Task: Add back My Links, reorder Connect With Me, skills open by default, English brand names
+
+Work Log:
+- Added back "My Links" section with Discord Server only (https://discord.gg/VqAweVa5Xa)
+- Made skills section expanded by default (useState(true)), still closable by clicking
+- Reordered Connect With Me to user's specified order:
+  1. Instagram
+  2. YouTube
+  3. GitHub
+  4. Steam
+  5. Discord (account — still placeholder username)
+  6. Phone (+963 948 579 158)
+  7. Email (abdulkarim.mmx@gmail.com)
+- Kept English brand names in Arabic version (Instagram, YouTube, GitHub, Steam, Discord)
+- Added Email icon (SVG) and Email link (mailto:abdulkarim.mmx@gmail.com)
+- Updated Steam icon to a cleaner chat-bubble style design
+- Added `email` case to getSocialIcon switch
+- Added linksTitle translation key back for My Links section
+- Fixed JSX parsing issue (link.icon !== <link.icon>)
+- QA tested with agent-browser:
+  - All 7 Connect With Me items visible in correct order ✅
+  - English brand names in Arabic ✅
+  - My Links section with Discord Server ✅
+  - Skills expanded by default ✅
+  - Language toggle works ✅
+  - Email link present ✅
+- Lint passes clean
+
+Stage Summary:
+- Connect With Me: 7 items (Instagram, YouTube, GitHub, Steam, Discord, Phone, Email)
+- My Links: Discord Server only
+- Skills: open by default, 4 skills, closable
+- English brand names kept in Arabic version
+- Discord account username still placeholder
+- Page running at http://localhost:3000

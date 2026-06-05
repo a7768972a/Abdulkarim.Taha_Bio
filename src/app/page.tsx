@@ -33,6 +33,7 @@ const t: Translations = {
   skill4Title: { ar: 'تصميم وترويج الاعلانات الالكترونية بالذكاء الصناعي', en: 'AI-Powered Ad Design & Promotion' },
   skill4Desc: { ar: 'تصميم وترويج الاعلانات الالكترونية بانواعها باستخدام احدث تقنيات الذكاء الصناعي.', en: 'Designing and promoting electronic ads of all types using the latest AI technologies.' },
   connectTitle: { ar: 'تواصل معي', en: 'Connect With Me' },
+  linksTitle: { ar: '🔗 روابطي', en: '🔗 My Links' },
   footer: { ar: '© 2025 عبدالكريم طه. جميع الحقوق محفوظة.', en: '© 2025 Abdulkarim Taha. All rights reserved.' },
 };
 
@@ -58,35 +59,8 @@ interface SocialLink {
 
 const socialLinks: SocialLink[] = [
   {
-    name: 'Discord',
-    nameAr: 'ديسكورد',
-    icon: 'discord',
-    url: '#',
-    color: '#5865F2',
-    username: 'your_discord_username',
-    usernameAr: 'اسم_الديسكورد',
-  },
-  {
-    name: 'GitHub',
-    nameAr: 'جيت هب',
-    icon: 'github',
-    url: 'https://github.com/a7768972a',
-    color: '#f0f0f0',
-    username: 'a7768972a',
-    usernameAr: 'a7768972a',
-  },
-  {
-    name: 'Steam',
-    nameAr: 'ستيم',
-    icon: 'steam',
-    url: 'https://steamcommunity.com/id/abdul85524/',
-    color: '#1b2838',
-    username: 'abdul85524',
-    usernameAr: 'abdul85524',
-  },
-  {
     name: 'Instagram',
-    nameAr: 'انستغرام',
+    nameAr: 'Instagram',
     icon: 'instagram',
     url: 'https://www.instagram.com/abdul85524/',
     color: '#E1306C',
@@ -95,7 +69,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'YouTube',
-    nameAr: 'يوتيوب',
+    nameAr: 'YouTube',
     icon: 'youtube',
     url: 'https://www.youtube.com/@abdulkarim_8552',
     color: '#FF0000',
@@ -103,13 +77,31 @@ const socialLinks: SocialLink[] = [
     usernameAr: '@abdulkarim_8552',
   },
   {
-    name: 'Discord Server',
-    nameAr: 'سيرفر ديسكورد',
+    name: 'GitHub',
+    nameAr: 'GitHub',
+    icon: 'github',
+    url: 'https://github.com/a7768972a',
+    color: '#f0f0f0',
+    username: 'a7768972a',
+    usernameAr: 'a7768972a',
+  },
+  {
+    name: 'Steam',
+    nameAr: 'Steam',
+    icon: 'steam',
+    url: 'https://steamcommunity.com/id/abdul85524/',
+    color: '#1b2838',
+    username: 'abdul85524',
+    usernameAr: 'abdul85524',
+  },
+  {
+    name: 'Discord',
+    nameAr: 'Discord',
     icon: 'discord',
-    url: 'https://discord.gg/VqAweVa5Xa',
+    url: '#',
     color: '#5865F2',
-    username: 'ATMETLY Community',
-    usernameAr: 'مجتمع ATMETLY',
+    username: 'your_discord_username',
+    usernameAr: 'your_discord_username',
   },
   {
     name: 'Phone',
@@ -121,9 +113,28 @@ const socialLinks: SocialLink[] = [
     usernameAr: '+963 948 579 158',
     isPhone: true,
   },
+  {
+    name: 'Email',
+    nameAr: 'بريد إلكتروني',
+    icon: 'email',
+    url: 'mailto:abdulkarim.mmx@gmail.com',
+    color: '#EA4335',
+    username: 'abdulkarim.mmx@gmail.com',
+    usernameAr: 'abdulkarim.mmx@gmail.com',
+  },
 ];
 
-
+const myLinks: { name: string; nameAr: string; icon: string; url: string; color: string; username: string; usernameAr: string }[] = [
+  {
+    name: 'Discord Server',
+    nameAr: 'Discord Server',
+    icon: 'discord',
+    url: 'https://discord.gg/VqAweVa5Xa',
+    color: '#5865F2',
+    username: 'ATMETLY Community',
+    usernameAr: 'مجتمع ATMETLY',
+  },
+];
 
 // ─── SVG Icons ──────────────────────────────────────────────────
 function DiscordIcon({ className = 'w-6 h-6' }: { className?: string }) {
@@ -161,7 +172,16 @@ function YouTubeIcon({ className = 'w-6 h-6' }: { className?: string }) {
 function SteamIcon({ className = 'w-6 h-6' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.25-1.017 2.265-2.266 2.265-1.253 0-2.265-1.015-2.265-2.265z"/>
+      <path d="M12 4.5C7.58 4.5 4 7.2 4 10.5c0 2.03 1.36 3.84 3.5 4.97L6.5 18l2.86-1.44c.86.17 1.76.28 2.64.28 4.42 0 8-2.7 8-6.07S16.42 4.5 12 4.5zm-3 5.5a1 1 0 110 2 1 1 0 010-2zm6 0a1 1 0 110 2 1 1 0 010-2zM12 2C6.48 2 2 5.81 2 10.5c0 2.67 1.66 5.04 4.25 6.54L5 21l3.75-1.88C9.44 19.38 10.7 19.5 12 19.5c5.52 0 10-3.81 10-9S17.52 2 12 2z"/>
+    </svg>
+  );
+}
+
+function EmailIcon({ className = 'w-6 h-6' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
     </svg>
   );
 }
@@ -252,6 +272,7 @@ function getSocialIcon(icon: string, className?: string) {
     case 'youtube': return <YouTubeIcon className={cls} />;
     case 'steam': return <SteamIcon className={cls} />;
     case 'phone': return <PhoneIcon className={cls} />;
+    case 'email': return <EmailIcon className={cls} />;
     default: return null;
   }
 }
@@ -382,7 +403,7 @@ const skills = [
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [lang, setLang] = useState<Lang>('ar');
-  const [servicesExpanded, setServicesExpanded] = useState(false);
+  const [servicesExpanded, setServicesExpanded] = useState(true);
 
   const toggleLang = () => setLang(prev => (prev === 'ar' ? 'en' : 'ar'));
 
@@ -586,7 +607,7 @@ export default function Home() {
                   <motion.a
                     key={link.name}
                     href={link.url}
-                    target={link.isPhone ? '_self' : '_blank'}
+                    target={link.isPhone || link.icon === 'email' ? '_self' : '_blank'}
                     rel="noopener noreferrer"
                     className="link-card flex items-center gap-4 p-4 rounded-xl glass cursor-pointer group"
                     initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
@@ -605,11 +626,55 @@ export default function Home() {
                       <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
                       <p className="text-xs text-muted-foreground truncate">{lang === 'ar' ? link.usernameAr : link.username}</p>
                     </div>
-                    {link.isPhone ? (
-                      <PhoneIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
+                    {link.isPhone || link.icon === 'email' ? (
+                      link.icon === 'email' ? <EmailIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" /> : <PhoneIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
                     ) : (
                       <ExternalLinkIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
                     )}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.section>
+
+            {/* My Links Section — Discord Server */}
+            <motion.section
+              className="glass rounded-2xl p-6 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.25 }}
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <LinkIcon className="w-4 h-4 text-primary" />
+                </div>
+                <h2 className="text-lg font-semibold text-gradient"><T k="linksTitle" /></h2>
+              </div>
+
+              <div className="space-y-3">
+                {myLinks.map((link, i) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-card flex items-center gap-4 p-4 rounded-xl glass cursor-pointer group"
+                    initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1.3 + i * 0.08 }}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors"
+                      style={{ backgroundColor: `${link.color}20` }}
+                    >
+                      <div style={{ color: link.color }}>
+                        {getSocialIcon(link.icon)}
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
+                      <p className="text-xs text-muted-foreground truncate">{lang === 'ar' ? link.usernameAr : link.username}</p>
+                    </div>
+                    <ExternalLinkIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
                   </motion.a>
                 ))}
               </div>
