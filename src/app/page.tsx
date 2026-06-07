@@ -98,10 +98,10 @@ const socialLinks: SocialLink[] = [
     name: 'Discord',
     nameAr: 'Discord',
     icon: 'discord',
-    url: '#',
+    url: 'https://discord.com/users/abdulkarim8552',
     color: '#5865F2',
-    username: 'your_discord_username',
-    usernameAr: 'your_discord_username',
+    username: 'abdulkarim8552',
+    usernameAr: 'abdulkarim8552',
   },
   {
     name: 'Phone',
@@ -131,8 +131,8 @@ const myLinks: { name: string; nameAr: string; icon: string; url: string; color:
     icon: 'discord',
     url: 'https://discord.gg/VqAweVa5Xa',
     color: '#5865F2',
-    username: 'ATMETLY Community',
-    usernameAr: 'مجتمع ATMETLY',
+    username: 'Star Community',
+    usernameAr: 'Star Community',
   },
 ];
 
@@ -172,7 +172,7 @@ function YouTubeIcon({ className = 'w-6 h-6' }: { className?: string }) {
 function SteamIcon({ className = 'w-6 h-6' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 4.5C7.58 4.5 4 7.2 4 10.5c0 2.03 1.36 3.84 3.5 4.97L6.5 18l2.86-1.44c.86.17 1.76.28 2.64.28 4.42 0 8-2.7 8-6.07S16.42 4.5 12 4.5zm-3 5.5a1 1 0 110 2 1 1 0 010-2zm6 0a1 1 0 110 2 1 1 0 010-2zM12 2C6.48 2 2 5.81 2 10.5c0 2.67 1.66 5.04 4.25 6.54L5 21l3.75-1.88C9.44 19.38 10.7 19.5 12 19.5c5.52 0 10-3.81 10-9S17.52 2 12 2z"/>
+      <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.009l.001.023zM21.26 8.915c0-1.577-1.282-2.858-2.861-2.858-1.578 0-2.86 1.282-2.86 2.86 0 1.579 1.282 2.861 2.86 2.861 1.579-.001 2.861-1.283 2.861-2.863zm-5.041-.005c0-1.205.981-2.186 2.186-2.186 1.205 0 2.186.981 2.186 2.186s-.981 2.186-2.186 2.186c-1.205-.001-2.186-.982-2.186-2.186z"/>
     </svg>
   );
 }
@@ -624,7 +624,7 @@ export default function Home() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
-                      <p className="text-xs text-muted-foreground truncate">{lang === 'ar' ? link.usernameAr : link.username}</p>
+                      <p className={`text-xs text-muted-foreground truncate ${link.isPhone || link.icon === 'email' ? 'dir-ltr' : ''}`} dir={(link.isPhone || link.icon === 'email') ? 'ltr' : undefined}>{lang === 'ar' ? link.usernameAr : link.username}</p>
                     </div>
                     {link.isPhone || link.icon === 'email' ? (
                       link.icon === 'email' ? <EmailIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" /> : <PhoneIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />

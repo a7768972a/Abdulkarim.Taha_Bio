@@ -190,3 +190,43 @@ Stage Summary:
 - English brand names kept in Arabic version
 - Discord account username still placeholder
 - Page running at http://localhost:3000
+
+---
+Task ID: 7
+Agent: Main Agent
+Task: Change Arabic font (Cairo→Changa) + Update Steam icon
+
+Work Log:
+- Replaced Cairo with Changa font for Arabic text
+- Updated Steam icon to official logo SVG
+- Created webDevReview cron job (every 15 min, job ID: 188636)
+
+Stage Summary:
+- Arabic font: Changa, English font: Outfit
+- Page running at http://localhost:3000
+
+---
+Task ID: 8
+Agent: Main Agent
+Task: Update Discord server name, Discord username, Steam icon, phone LTR fix
+
+Work Log:
+- Changed Discord Server name from "ATMETLY Community" to "Star Community"
+- Updated Discord username from placeholder to "abdulkarim8552"
+- Updated Discord account URL to https://discord.com/users/abdulkarim8552
+- Updated Steam icon to official Steam logo SVG (Simple Icons)
+- Fixed phone number + email to always display LTR (left-to-right) in both AR/EN modes
+  - Added `dir="ltr"` attribute to username span for phone and email items
+- QA verified via agent-browser:
+  - Discord username: abdulkarim8552 ✅
+  - Discord Server: Star Community ✅
+  - Phone dir="ltr" ✅ (+963 948 579 158 displays correctly)
+  - Email dir="ltr" ✅
+  - Steam icon updated ✅
+- Lint passes clean
+
+Stage Summary:
+- All data fields now use real user-provided values
+- No more placeholder usernames
+- Phone/email display correctly in both language modes
+- Page running at http://localhost:3000
