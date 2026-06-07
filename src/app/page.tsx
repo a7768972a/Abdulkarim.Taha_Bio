@@ -610,6 +610,7 @@ export default function Home() {
                     target={link.isPhone || link.icon === 'email' ? '_self' : '_blank'}
                     rel="noopener noreferrer"
                     className="link-card flex items-center gap-4 p-4 rounded-xl glass cursor-pointer group"
+                    dir={(link.isPhone || link.icon === 'email') ? 'ltr' : undefined}
                     initial={{ opacity: 0, x: lang === 'ar' ? 20 : -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.2 + i * 0.08 }}
@@ -624,7 +625,7 @@ export default function Home() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
-                      <p className={`text-xs text-muted-foreground truncate ${link.isPhone || link.icon === 'email' ? 'dir-ltr' : ''}`} dir={(link.isPhone || link.icon === 'email') ? 'ltr' : undefined}>{lang === 'ar' ? link.usernameAr : link.username}</p>
+                      <p className="text-xs text-muted-foreground truncate" dir="ltr">{lang === 'ar' ? link.usernameAr : link.username}</p>
                     </div>
                     {link.isPhone || link.icon === 'email' ? (
                       link.icon === 'email' ? <EmailIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" /> : <PhoneIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
