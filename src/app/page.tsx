@@ -624,7 +624,7 @@ export default function Home() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-foreground/90">{lang === 'ar' ? link.nameAr : link.name}</p>
-                      <p className={`text-xs text-muted-foreground truncate ${link.isPhone && lang === 'en' ? 'text-left' : ''}`} dir={link.isPhone && lang === 'en' ? 'ltr' : undefined}>{lang === 'ar' ? link.usernameAr : link.username}</p>
+                      <p className={`text-xs text-muted-foreground truncate ${link.isPhone ? (lang === 'ar' ? 'text-right' : 'text-left') : ''}`} dir={link.isPhone ? 'ltr' : undefined}>{lang === 'ar' ? link.usernameAr : link.username}</p>
                     </div>
                     {link.isPhone || link.icon === 'email' ? (
                       link.icon === 'email' ? <EmailIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" /> : <PhoneIcon className="w-4 h-4 text-muted-foreground/40 group-hover:text-primary/60 transition-colors flex-shrink-0" />
