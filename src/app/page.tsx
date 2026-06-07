@@ -402,7 +402,7 @@ const skills = [
 // ─── Main Page ───────────────────────────────────────────────────
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [lang, setLang] = useState<Lang>('ar');
+  const [lang, setLang] = useState<Lang>('en');
   const [servicesExpanded, setServicesExpanded] = useState(true);
 
   const toggleLang = () => setLang(prev => (prev === 'ar' ? 'en' : 'ar'));
