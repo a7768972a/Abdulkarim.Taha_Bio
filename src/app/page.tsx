@@ -62,10 +62,10 @@ const socialLinks: SocialLink[] = [
     name: 'Instagram',
     nameAr: 'Instagram',
     icon: 'instagram',
-    url: 'https://www.instagram.com/abdul85524/',
+    url: 'https://www.instagram.com/abdulkarim_.taha/',
     color: '#E1306C',
-    username: '@abdul85524',
-    usernameAr: '@abdul85524',
+    username: '@abdulkarim_.taha',
+    usernameAr: '@abdulkarim_.taha',
   },
   {
     name: 'YouTube',

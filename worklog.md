@@ -230,3 +230,20 @@ Stage Summary:
 - No more placeholder usernames
 - Phone/email display correctly in both language modes
 - Page running at http://localhost:3000
+
+---
+Task ID: instagram-update
+Agent: Z.ai Code (user request)
+Task: Update Instagram account to @abdulkarim_.taha
+
+Work Log:
+- Located Instagram references in src/app/page.tsx (url, username, usernameAr)
+- Replaced Instagram URL from https://www.instagram.com/abdul85524/ -> https://www.instagram.com/abdulkarim_.taha/
+- Replaced Instagram username/usernameAr from @abdul85524 -> @abdulkarim_.taha
+- Left Steam references (abdul85524) untouched
+- Verified diff only touches the Instagram block
+- Committed and pushed to GitHub (main branch)
+
+Stage Summary:
+- Instagram account in the bio site is now @abdulkarim_.taha
+- No other social links affected
